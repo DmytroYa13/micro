@@ -8,8 +8,9 @@ export class UserEntity implements IUser {
   passwordHash: string;
   role: UserRole;
 
-  constructor(user: IUser) {
+  constructor(user: any) { //TODO fix IUser
     this._id = user._id;
+    this.passwordHash = user.passwordHash;
     this.displayName = user.displayName;
     this.email = user.email;
     this.role = user.role;
