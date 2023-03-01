@@ -3,7 +3,7 @@ import { Document } from 'mongoose';
 import { IUser, UserRole } from '@purple/interfaces';
 
 @Schema()
-export class User extends Document<IUser> {
+export class User extends Document implements IUser {
   @Prop()
   displayName?: string;
 
